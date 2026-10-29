@@ -11,20 +11,20 @@ pipeline {
 
         stage('Verify Python') {
             steps {
-                bat 'python --version'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" --version'
             }
         }
 
         stage('Run Application') {
             steps {
-                bat 'python hello.py'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" hello.py'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'python -m pip install pytest'
-                bat 'python -m pytest -v'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install pytest'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pytest -v'
             }
         }
     }
